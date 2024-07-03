@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v68"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v68.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v68-complete.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-build.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-configure.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-download.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-install.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-mkdir.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-patch.rule"
+		},
+		{
+			"file" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v68/dsp_build_v68-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"dsp_build_v68"
+		],
+		"name" : "dsp_build_v68"
+	}
+}

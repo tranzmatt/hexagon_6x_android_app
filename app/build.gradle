@@ -1,0 +1,203 @@
+
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+apply plugin: 'com.android.application'
+
+// Read properties from local.properties
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { stream ->
+        localProperties.load(stream)
+    }
+}
+
+def hexagonSdkRoot = localProperties.getProperty("HEXAGON_SDK_ROOT", "")
+def hexagonToolsRoot = localProperties.getProperty("HEXAGON_TOOLS_ROOT", "")
+def sdkDir = localProperties.getProperty("sdk.dir", "")
+def ndkDir = localProperties.getProperty("ndk.dir", "")
+
+android {
+
+    namespace "com.example.android_app"
+
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.android_app"
+        minSdkVersion 28
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                version "3.18.0+"
+                cppFlags ""
+                arguments "-DANDROID_STL=c++_shared",
+                        "-DDEPENDENCIES=",
+                        "-DSYSTEM_TYPE=AS",
+                        "-DOS_TYPE=AS_HLOS",
+                        "-DCMAKE_VERBOSE_MAKEFILE=1",
+                        "-DPREBUILT_LIB_DIR=android_aarch64",
+                        "-DHEXAGON_SDK_ROOT=${hexagonSdkRoot}",
+                        "-DHEXAGON_TOOLS_ROOT=${hexagonToolsRoot}",
+                        "-DDSP_TYPE=3"
+            }
+        }
+        ndk {
+            abiFilters "arm64-v8a"
+            // Use the NDK path from local.properties if specified
+            if (ndkDir) {
+                ndkPath ndkDir
+            }
+        }
+        packagingOptions {
+            exclude "lib/arm64-v8a/libcdsprpc.so"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            externalNativeBuild {
+                cmake {
+                    arguments "-DV=android_ReleaseG_aarch64",
+                            "-DADD_SYMBOLS=1",
+                            "-DCMAKE_BUILD_TYPE=Release"
+                            //"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=../../../../src/main/cpp/android_ReleaseG_aarch64/ship",
+                            //"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=../../../../src/main/cpp/android_ReleaseG_aarch64/ship"
+                }
+            }
+
+            project.afterEvaluate {
+                mergeReleaseJniLibFolders.dependsOn copyV68FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyAsyncV68FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyV69FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyAsyncV69FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyV73FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyAsyncV73FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyV75FileToJniLibsRelease
+                mergeReleaseJniLibFolders.dependsOn copyAsyncV75FileToJniLibsRelease
+            }
+        }
+
+        debug {
+            externalNativeBuild {
+                cmake {
+                    arguments "-DV=android_Debug_aarch64",
+                              "-DCMAKE_BUILD_TYPE=Debug"
+                            //"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=../../../../src/main/cpp/android_Debug_aarch64/ship",
+                            //"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=../../../../src/main/cpp/android_Debug_aarch64/ship"
+                }
+            }
+            project.afterEvaluate {
+                mergeDebugJniLibFolders.dependsOn copyV68FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyAsyncV68FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyV69FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyAsyncV69FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyV73FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyAsyncV73FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyV75FileToJniLibsDebug
+                mergeDebugJniLibFolders.dependsOn copyAsyncV75FileToJniLibsDebug
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            version "3.18.0+"
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+}
+
+def ver_hex_tools = 'v87'
+
+task copyV68FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v68/ship/libandroid_app_skel_v68.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV68FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v68/ship/libandroid_app_async_skel_v68.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV69FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v69/ship/libandroid_app_skel_v69.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV69FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v69/ship/libandroid_app_async_skel_v69.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV68FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v68/ship/libandroid_app_skel_v68.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV68FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v68/ship/libandroid_app_async_skel_v68.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV69FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v69/ship/libandroid_app_skel_v69.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV69FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v69/ship/libandroid_app_async_skel_v69.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV73FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v73/ship/libandroid_app_skel_v73.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV73FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v73/ship/libandroid_app_async_skel_v73.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV73FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v73/ship/libandroid_app_skel_v73.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV73FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v73/ship/libandroid_app_async_skel_v73.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV75FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v75/ship/libandroid_app_skel_v75.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV75FileToJniLibsDebug(type: Copy) {
+    from file("../dsp/hexagon_Debug_tool${ver_hex_tools}_v75/ship/libandroid_app_async_skel_v75.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyV75FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v75/ship/libandroid_app_skel_v75.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+task copyAsyncV75FileToJniLibsRelease(type: Copy) {
+    from file("../dsp/hexagon_ReleaseG_tool${ver_hex_tools}_v75/ship/libandroid_app_async_skel_v75.so")
+    into file("src/main/jniLibs/arm64-v8a")
+}
+
+dependencies {
+    implementation fileTree(dir: "jni", include: ["*.*"])
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+}

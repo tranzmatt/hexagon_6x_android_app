@@ -1,0 +1,66 @@
+/*==============================================================================
+  Copyright (c) 2021, 2022 Qualcomm Technologies, Inc.
+  All rights reserved. Qualcomm Proprietary and Confidential.
+==============================================================================*/
+
+/* Note: Session stats and configs are shared not only between the CPU and DSP, but also
+ * with the Java session implementing the APK. */
+
+struct android_app_stats {
+
+  int32 session_id;
+
+  //-----------------------------------------------------
+  // Relevant to CPU only
+  int32 num_failed_tests;              // Number of times a task failed to produce the correct output
+
+  /* The CPU submits tasks to the DSP either continuously or at fixed intervals.  The CPU
+   * time measures the time during which the CPU waits while the DSP is busy processing a task,
+   * while the test time measures the time of the entire time for running the entire test.
+   */
+  uint64 cpu_time_us;                  // total time spent on CPU while the DSP is busy
+  uint64 test_time_us;                 // total time spent on CPU running the session
+
+  //-----------------------------------------------------
+  // Relevant to DSP as well
+  uint64 dsp_time_us;                  // total time spent on DSP
+  uint64 waiting_on_resource_time_us;  // total time spent waiting on resource
+  int32 num_tasks_completed;           // number of tasks successfully completed
+  int32 num_tasks_aborted;             // number of time-critical tasks that could not complete in time
+  int32 num_tasks_failed;              // number of tasks that failed (e.g. because of a timeout on resource acquisition)
+  int32 num_tasks_interrupted;         // number of tasks that were interrupted by a higher-priority thread requesting resource
+  int32 num_interruptions;             // number of interruptions caused by a higher-priority thread requesting resource
+
+};
+
+struct android_app_configs {
+
+  int32 session_id;
+
+  //-----------------------------------------------------
+  // Relevant to CPU only
+  int32 thread_priority;               // DSP thread priority, set by CPU
+  int32 num_tasks;                     // number of DSP calls/tasks. -1 forever.
+  int32 is_off;                        // use to bypass the session entirely
+  int32 dsp_version;                   // DSP version on which the app is running
+
+  //-----------------------------------------------------
+  // Relevant to DSP
+  int32 vtcm_size_mb;                  // VTCM size requested
+  int32 num_workers;                   // num workers dispatched to execute each DSP task
+  int32 mega_cycles_per_task;          // mega cycles spent in each DSP task
+  int32 is_serialized;                 // whether resource request is serialized
+  int32 is_asynchronous;               // whether FastRPC call is asynchronous
+  int32 trigger_period_ms;             // period between each new DSP task
+  int32 resource_acquire_timeout_us;   // duration before a resource acquire request expires
+  int32 task_trigger;                  // how a new task is triggered
+                                       // * timed tasks will fire every trigger period
+                                       // * queued tasks will fire right away
+  int32 array_width;                   // width of test array
+  int32 array_height;                  // height of test array
+
+  //-----------------------------------------------------
+  // Relevant to CPU and DSP
+  int32 verbose_mask;                  // control amount of logs being sent out by CPU and DSP
+
+};

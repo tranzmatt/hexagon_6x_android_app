@@ -1,0 +1,82 @@
+{
+  "buildFiles": [
+    "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/mclark/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-v",
+      "-C",
+      "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/mclark/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-v",
+    "-C",
+    "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "android_app_async::@6890427a1f51a3e7e1df": {
+      "artifactName": "android_app_async",
+      "abi": "arm64-v8a",
+      "output": "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/android_Debug_aarch64/ship/libandroid_app_async.so",
+      "runtimeFiles": [
+        "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/remote/ship/android_aarch64/libcdsprpc.so"
+      ]
+    },
+    "qidlTargetandroid_app_defsODjdm::@6890427a1f51a3e7e1df": {
+      "artifactName": "qidlTargetandroid_app_defsODjdm",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "dsp_build_v68::@6890427a1f51a3e7e1df": {
+      "artifactName": "dsp_build_v68",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "dsp_build_v75::@6890427a1f51a3e7e1df": {
+      "artifactName": "dsp_build_v75",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "android_app_apk::@6890427a1f51a3e7e1df": {
+      "artifactName": "android_app_apk",
+      "abi": "arm64-v8a",
+      "output": "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/android_Debug_aarch64/ship/libandroid_app_apk.so",
+      "runtimeFiles": [
+        "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/remote/ship/android_aarch64/libcdsprpc.so"
+      ]
+    },
+    "dsp_build_v73::@6890427a1f51a3e7e1df": {
+      "artifactName": "dsp_build_v73",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "dsp_build_v69::@6890427a1f51a3e7e1df": {
+      "artifactName": "dsp_build_v69",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "android_app::@6890427a1f51a3e7e1df": {
+      "artifactName": "android_app",
+      "abi": "arm64-v8a",
+      "output": "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/android_Debug_aarch64/ship/libandroid_app.so",
+      "runtimeFiles": [
+        "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/remote/ship/android_aarch64/libcdsprpc.so"
+      ]
+    },
+    "qidlTargetandroid_appdaCO7::@6890427a1f51a3e7e1df": {
+      "artifactName": "qidlTargetandroid_appdaCO7",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "qidlTargetandroid_app_asyncnkXkO::@6890427a1f51a3e7e1df": {
+      "artifactName": "qidlTargetandroid_app_asyncnkXkO",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    }
+  }
+}

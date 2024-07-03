@@ -1,0 +1,241 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/android_Debug_aarch64/ship/libandroid_app_async.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"link_prebuilt_lib_struct",
+			"link_custom_library_prebuilt",
+			"link_custom_library",
+			"add_dependencies",
+			"build_idl",
+			"include_directories",
+			"include"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"/home/mclark/Qualcomm/Hexagon_SDK/6x/build/cmake/hexagon_fun_internal.cmake",
+			"/home/mclark/Qualcomm/Hexagon_SDK/6x/build/cmake/hexagon_fun.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 81,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 87,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 472,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 195,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 159,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 91,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 295,
+				"parent" : 6
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 77,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 78,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "android_app_async_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/rtld/ship/android_aarch64"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/rpcmem/inc"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/inc"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/incs"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/incs/stddef"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/utils/examples"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/remote/ship/android_aarch64"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			],
+			"sysroot" : 
+			{
+				"path" : "/home/mclark/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot"
+			}
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 7,
+			"id" : "qidlTargetandroid_app_async46KN4::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "android_app_async::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/mclark/Qualcomm/Hexagon_SDK/6x/ipc/fastrpc/remote/ship/android_aarch64/libcdsprpc.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic -lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C",
+		"sysroot" : 
+		{
+			"path" : "/home/mclark/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot"
+		}
+	},
+	"name" : "android_app_async",
+	"nameOnDisk" : "libandroid_app_async.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/android_app_async_stub.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/android_app_async_skel.c.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

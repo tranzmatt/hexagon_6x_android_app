@@ -1,0 +1,141 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ExternalProject_Add",
+			"build_hexagon"
+		],
+		"files" : 
+		[
+			"/home/mclark/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/ExternalProject.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 113,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 46,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3530,
+				"parent" : 2
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "ExternalProjectTargets/dsp_build_v69"
+	},
+	"id" : "dsp_build_v69::@6890427a1f51a3e7e1df",
+	"name" : "dsp_build_v69",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a/CMakeFiles/dsp_build_v69",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a/CMakeFiles/dsp_build_v69.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a/CMakeFiles/dsp_build_v69-complete.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-build.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-configure.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-download.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-install.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-mkdir.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-patch.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v69/dsp_build_v69-update.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

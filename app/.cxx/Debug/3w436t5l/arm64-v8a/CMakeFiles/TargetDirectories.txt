@@ -1,0 +1,12 @@
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/android_app.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/android_app_async.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/qidlTargetandroid_appodEWe.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/qidlTargetandroid_app_defsCNDfR.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/qidlTargetandroid_app_async46KN4.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/android_app_apk.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v68.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v69.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v73.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/dsp_build_v75.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/edit_cache.dir
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3w436t5l/arm64-v8a/CMakeFiles/rebuild_cache.dir

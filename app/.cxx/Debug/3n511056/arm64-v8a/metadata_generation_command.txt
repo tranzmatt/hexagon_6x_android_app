@@ -1,0 +1,27 @@
+                        -H/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=28
+-DANDROID_PLATFORM=android-28
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=/home/mclark/Android/Sdk/ndk/26.1.10909125
+-DCMAKE_ANDROID_NDK=/home/mclark/Android/Sdk/ndk/26.1.10909125
+-DCMAKE_TOOLCHAIN_FILE=/home/mclark/Android/Sdk/ndk/26.1.10909125/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/home/mclark/Android/Sdk/cmake/3.22.1/bin/ninja
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/mclark/StudioProjects/hexagon_6x_android_app/app/build/intermediates/cxx/Debug/3n511056/obj/arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/mclark/StudioProjects/hexagon_6x_android_app/app/build/intermediates/cxx/Debug/3n511056/obj/arm64-v8a
+-B/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a
+-GNinja
+-DANDROID_STL=c++_shared
+-DSYSTEM_TYPE=AS
+-DOS_TYPE=AS_HLOS
+-DCMAKE_VERBOSE_MAKEFILE=1
+-DPREBUILT_LIB_DIR=android_aarch64
+-DHEXAGON_SDK_ROOT=/home/mclark/Qualcomm/Hexagon_SDK/6x
+-DHEXAGON_TOOLS_ROOT=/home/mclark/Qualcomm/Hexagon_SDK/6x/tools/HEXAGON_Tools/8.7.08
+-DDSP_TYPE=3
+-DV=android_Debug_aarch64
+-DCMAKE_BUILD_TYPE=Debug
+                        Build command args: [-v]
+                        Version: 2

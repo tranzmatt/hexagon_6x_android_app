@@ -1,0 +1,1 @@
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp/CMakeLists.txt

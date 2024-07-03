@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "android_app",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "android_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-android_app-Debug-d1dde9fca3b154f83b68.json",
+					"name" : "android_app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "android_app_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-android_app_apk-Debug-112476b51660ae3c470e.json",
+					"name" : "android_app_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "android_app_async::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-android_app_async-Debug-a8ca65f2cb9ff4cee2de.json",
+					"name" : "android_app_async",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dsp_build_v68::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dsp_build_v68-Debug-bf8409fc27e31bc29146.json",
+					"name" : "dsp_build_v68",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dsp_build_v69::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dsp_build_v69-Debug-ef1489609a868015089f.json",
+					"name" : "dsp_build_v69",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dsp_build_v73::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dsp_build_v73-Debug-6ab2afbd80c08fd147c0.json",
+					"name" : "dsp_build_v73",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dsp_build_v75::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dsp_build_v75-Debug-1ef414d78e4aa9bb9138.json",
+					"name" : "dsp_build_v75",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qidlTargetandroid_app_asyncnkXkO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qidlTargetandroid_app_asyncnkXkO-Debug-1ae309f9502ccd20b6e1.json",
+					"name" : "qidlTargetandroid_app_asyncnkXkO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qidlTargetandroid_app_defsODjdm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qidlTargetandroid_app_defsODjdm-Debug-2071766e83d846e9bb66.json",
+					"name" : "qidlTargetandroid_app_defsODjdm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qidlTargetandroid_appdaCO7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qidlTargetandroid_appdaCO7-Debug-b74e691535811eee2680.json",
+					"name" : "qidlTargetandroid_appdaCO7",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a",
+		"source" : "/home/mclark/StudioProjects/hexagon_6x_android_app/app/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

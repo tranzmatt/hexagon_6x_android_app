@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">android_app</string>
+    <string name="button_send">Save</string>
+</resources>

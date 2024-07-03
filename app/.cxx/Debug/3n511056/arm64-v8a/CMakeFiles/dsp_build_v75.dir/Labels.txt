@@ -1,0 +1,13 @@
+# Target labels
+ dsp_build_v75
+# Source files and their labels
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a/CMakeFiles/dsp_build_v75
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a/CMakeFiles/dsp_build_v75.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/app/.cxx/Debug/3n511056/arm64-v8a/CMakeFiles/dsp_build_v75-complete.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-build.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-configure.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-download.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-install.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-mkdir.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-patch.rule
+/home/mclark/StudioProjects/hexagon_6x_android_app/dsp/hexagon_Debug_toolv87_v75/dsp_build_v75-update.rule

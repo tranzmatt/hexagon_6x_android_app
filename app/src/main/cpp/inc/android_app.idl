@@ -1,0 +1,26 @@
+/*==============================================================================
+  Copyright (c) 2021,2022 Qualcomm Technologies, Inc.
+  All rights reserved. Qualcomm Proprietary and Confidential.
+==============================================================================*/
+
+#include "AEEStdDef.idl"
+#include "remote.idl"
+#include "android_app_defs.idl"
+
+interface android_app : remote_handle64{
+
+  AEEResult set_clocks(
+    in int32 power_level,            // sets the clocks for a given voltage level
+    in int32 latency,                // latency tolerance for low-power states
+    in int32 dcvs_enabled            // flag for enabling DCVS
+  );
+
+  AEEResult run(in android_app_configs c, in sequence<uint8> in_ptr, rout sequence<uint8> out_ptr);
+
+  AEEResult get_stats(rout android_app_stats s);
+
+  AEEResult terminate();
+
+  AEEResult dummy();
+
+};
